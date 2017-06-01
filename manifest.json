@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "ZombieScroll",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "zombie-icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "*://www.facebook.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/"],
+      "js": ["scrollWatcher.js"]
+    }
+  ]
+}
